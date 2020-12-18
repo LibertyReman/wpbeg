@@ -1,4 +1,4 @@
-        <?php get_header(); ?> //header.phpを読み込むテンプレートタグ（インクルードタグ）
+        <?php get_header(); ?>
         <div class="c-wrap">
             <div class="c-grid">
                 <div class="p-contents">
@@ -40,7 +40,7 @@
                     <li class="prevpostslink"><a rel="next" href="#">Prev</a></li>
                     <li class="nextpostslink"><a rel="next" href="#">Next</a></li>
                 </ul>
-                <?php get_sidebar(); ?> //siderbar.phpを読み込むテンプレートタグ（インクルードタグ）
+                <?php get_sidebar(); ?>
             </div>
         </div>
-        <?php get_footer(); ?> //footer.phpを読み込むテンプレートタグ（インクルードタグ）
+        <?php get_footer(); ?>
