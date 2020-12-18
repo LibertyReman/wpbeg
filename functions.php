@@ -2,7 +2,7 @@
     //テーマサポート
     add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
-
+    add_theme_support( 'post-thumbnails' ); //アイキャッチ画像を使えるようにする
     //タイトル出力
     function wpbeg_title( $title ) {
         if ( is_front_page() && is_home() ) { //トップページなら
