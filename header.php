@@ -27,5 +27,6 @@
                     <li class="menu-item"><a href="page.html">About</a></li>
                 </ul>
             </div>
+            <?php get_search_form(); ?>
         </header>
 
