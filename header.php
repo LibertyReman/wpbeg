@@ -21,12 +21,7 @@
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?><span class="header__ttl__sub">static</span></a>
         </h1>
 <p class="header__descrition"><?php bloginfo( 'description' ); ?></p>
-            <div class="menu-gmenu-container">
-                <ul class="menu">
-                    <li class="menu-item current_page_item"><a href="index.html">Blog</a></li>
-                    <li class="menu-item"><a href="page.html">About</a></li>
-                </ul>
-            </div>
-            <?php get_search_form(); ?>
+        <?php wp_nav_menu(); ?>
+        <?php get_search_form(); ?>
         </header>
 
