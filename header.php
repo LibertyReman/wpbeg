@@ -17,8 +17,10 @@
     </head>
     <body>
         <header class="header">
-            <h1 class="header__ttl"><a href="./">WPBEG<span class="header__ttl__sub">static</span></a></h1>
-            <p class="header__descrition">Just another WordPress site</p>
+        <h1 class="header__ttl">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?><span class="header__ttl__sub">static</span></a>
+        </h1>
+<p class="header__descrition"><?php bloginfo( 'description' ); ?></p>
             <form class="p-search-form" id="searchform">
                 <input class="p-search-form__keyword" placeholder="キーワード">
                 <input class="p-search-form__submit" id="searchsubmit" type="submit" value="検索">
