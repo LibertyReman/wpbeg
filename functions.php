@@ -24,3 +24,40 @@
     }
     add_action( 'wp_enqueue_scripts', 'wpbeg_script' ); //自作関数
 
+    function wpbeg_widgets_init() {
+        register_sidebar (
+            array(
+                'name'          => 'カテゴリーウィジェット',
+                'id'            => 'category_widget',
+                'description'   => 'カテゴリー用ウィジェットです',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h2><i class="fa fa-folder-open" aria-hidden="true"></i>',
+                'after_title'   => "</h2>\n",
+            )
+        );
+        register_sidebar(
+            array(
+                'name'          => 'タグウィジェット',
+                'id'            => 'tag_widget',
+                'description'   => 'タグ用ウィジェットです',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h2><i class="fa fa-tags" aria-hidden="true"></i>',
+                'after_title'   => "</h2>\n",
+            )
+        );
+        register_sidebar(
+            array(
+                'name'          => 'アーカイブウィジェット',
+                'id'            => 'archive_widget',
+                'description'   => 'アーカイブ用ウィジェットです',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h2><i class="fa fa-archive" aria-hidden="true"></i>',
+                'after_title'   => "</h2>\n",
+            )
+        );
+    }
+    add_action( 'widgets_init', 'wpbeg_widgets_init' );
+
