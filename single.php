@@ -33,6 +33,7 @@
                                     <div class="post__author__name"><?php the_author_posts_link(); ?></div>
                                     <p class="post__author__comment"><?php echo get_the_author_meta( 'description' ) ?></p>
                                 </div>
+                                <?php comments_template(); ?>
                             <?php endwhile;
                         else :
                             ?><p>表示する記事がありません</p><?php
