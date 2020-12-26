@@ -5,4 +5,11 @@
             <?php wp_list_comments( 'avatar_size=60' ); ?>
         </ul>
     <?php endif; ?>
+    <?php
+        $args = array(
+            'title_reply' => 'Leave a Reply',
+            'label_submit' => ' POST COMMENT',
+        );
+        comment_form( $args );
+    ?>
 </div>
