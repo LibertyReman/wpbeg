@@ -31,9 +31,19 @@
                                     <p class="post__author__ttl">投稿者</p>
                                     <?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
                                     <div class="post__author__name"><?php the_author_posts_link(); ?></div>
-                                    <p class="post__author__comment"><?php echo get_the_author_meta( 'description' ) ?></p>
+                                    <p class="post__author__comment"><?php the_author_meta( 'description' ) ?></p>
                                 </div>
                                 <?php comments_template(); ?>
+                                <?php if( get_previous_post() || get_next_post() ) : ?>
+                                    <ul class="p-pagenation">
+                                        <?php if ( get_previous_post() ) : ?>
+                                            <li class="prevpostslink"><?php previous_post_link( '%link', 'Prev' ); ?></li>
+                                        <?php endif; ?>
+                                        <?php if( get_next_post() ): ?>
+                                            <li class="prevpostslink"><?php next_post_link( '%link', 'Next' ); ?></li>
+                                        <?php endif; ?>
+                                    </ul>
+                                <?php endif; ?>
                             <?php endwhile;
                         else :
                             ?><p>表示する記事がありません</p><?php
@@ -41,8 +51,6 @@
                     ?>
                 </div>
             </div>
-            <div class="p-pagenation"><a class="prevpostslink" rel="next" href="#">Prev</a><a class="nextpostslink" rel="next" href="#">Next</a></div>
-
             <?php get_sidebar(); ?>
         </div>
     </div>
