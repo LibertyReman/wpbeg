@@ -24,6 +24,11 @@
     }
     add_action( 'wp_enqueue_scripts', 'wpbeg_script' ); //自作関数
 
+    function wpbeg_theme_add_editor_styles() { //editor-style.cssを読み込む自作関数
+        add_editor_style( get_template_directory_uri() . "/css/editor-style.css" );
+    }
+    add_action( 'admin_init', 'wpbeg_theme_add_editor_styles' );
+
     function wpbeg_widgets_init() {
         register_sidebar (
             array(
