@@ -4,6 +4,9 @@
         <ul class="p-comment__list">
             <?php wp_list_comments( 'avatar_size=60' ); ?>
         </ul>
+        <div class="comment-page-link">
+            <?php paginate_comments_links(); ?>
+        </div>
     <?php endif; ?>
     <?php
         $args = array(
