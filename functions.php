@@ -3,7 +3,12 @@
     add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' ); //アイキャッチ画像を使えるようにする
-    //add_theme_support( 'automatic-feed-links' ); //フィードの設定
+    add_theme_support( 'automatic-feed-links' ); //フィードの設定
+
+    if ( ! isset( $content_width ) ) {
+        $content_width = 960;
+    }
+
     //タイトル出力
     function wpbeg_title( $title ) {
         if ( is_front_page() && is_home() ) { //トップページなら
