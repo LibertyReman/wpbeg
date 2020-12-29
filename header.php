@@ -8,6 +8,7 @@
         <meta name="description" content="WordPress theme development static data for beginners">
         <meta name="keywords" content="WordPress, Theme, development">
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/common/ico/favicon.ico">
+        <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
