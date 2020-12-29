@@ -16,6 +16,6 @@
             <h1 class="header__ttl"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?><span class="header__ttl__sub">static</span></a></h1>
         <p class="header__descrition"><?php bloginfo( 'description' ); ?></p>
         <?php get_search_form(); ?>
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => '' ) ); ?>
 </header>
 

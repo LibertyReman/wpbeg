@@ -9,7 +9,6 @@
         }
         register_nav_menus( array(
             'global_nav' => esc_html__( 'global navigation', 'wpbeg' ),
-            'theme_location' => 'header-menu',
         ) );
     }
     add_action( 'after_setup_theme', 'wpbeg_setup' );
