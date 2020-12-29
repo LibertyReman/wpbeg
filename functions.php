@@ -72,3 +72,9 @@
     }
     add_action( 'widgets_init', 'wpbeg_widgets_init' );
 
+    function wpbeg_theme_setup(){
+        load_theme_textdomain( 'wpbeg', get_template_directory() . '/languages' );
+    }
+    add_action( 'after_setup_theme', 'wpbeg_theme_setup' );
+
+
