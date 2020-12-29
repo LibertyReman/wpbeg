@@ -1,9 +1,17 @@
 <?php
     //テーマサポート
-    add_theme_support( 'menus' );
-    add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails' ); //アイキャッチ画像を使えるようにする
-    add_theme_support( 'automatic-feed-links' ); //フィードの設定
+    if ( ! function_exists( 'wpbeg_setup' ) ) {
+        function wpbeg_setup() {
+            load_theme_textdomain( 'wpbeg', get_template_directory() . '/languages' );
+            add_theme_support( 'title-tag' );
+            add_theme_support( 'post-thumbnails' );
+            add_theme_support( 'automatic-feed-links' );
+        }
+        register_nav_menus( array(
+            'global_nav' => esc_html__( 'global navigation', 'wpbeg' ),
+        ) );
+    }
+    add_action( 'after_setup_theme', 'wpbeg_setup' );
 
     if ( ! isset( $content_width ) ) {
         $content_width = 960;
